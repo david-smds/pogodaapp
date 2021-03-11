@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol TwentyHoursWeatherManagerDelegate {
     func didUpdateWeatherThree(weather: WeatherModel)
@@ -20,6 +21,11 @@ struct TwentyHoursWeatherManager {
     
     func fetchWeatherThree(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
+        performRequest(urlString: urlString)
+    }
+    
+    func fetchWeatherThree(latitude: CLLocationDegrees, longtitude: CLLocationDegrees) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longtitude)"
         performRequest(urlString: urlString)
     }
     
@@ -52,9 +58,6 @@ struct TwentyHoursWeatherManager {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherDataTwo.self, from: weatherData)
-            //let id = decodedData.list[4].weather[0].id
-            //let temp = decodedData.list[4].main.temp
-            //let name = decodedData.list[0].weather[0].description
             let id = decodedData.list[7].weather[0].id
             let temp = decodedData.list[7].main.temp
             let name = decodedData.city.name
@@ -70,13 +73,5 @@ struct TwentyHoursWeatherManager {
         
     }
     
-    
-    
 }
 
-
-//list[4].main.temp
-//list[4].weather[0].id
-
-//list[4].wind.speed
-//list[8].weather[0].id

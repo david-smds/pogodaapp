@@ -158,9 +158,9 @@
 		6F8C9C5F25B02DD800897D9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6F8C9C6325B02E4A00897D9B /* WeatherManager.swift */,
 				6F82579E25B0B85E0054EA9C /* WeatherData.swift */,
 				6F8257A325B1A4400054EA9C /* WeatherModel.swift */,
+				6F8C9C6325B02E4A00897D9B /* WeatherManager.swift */,
 				6F894ACC25B9AE2600F1A25C /* WeatherManagerTwo.swift */,
 				6F894AE125B9F33100F1A25C /* WeatherManagerThree.swift */,
 			);
