@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
             
             self.nextDayTemperatureLabel.text = weather.temperatureString
             self.nextDayConditionImageView.image = UIImage(systemName: weather.conditionName)
-            self.nextDayLabel.text = "Za 12 godzin"
+            self.nextDayLabel.text = "In 12 hrs"
             
         }
         
@@ -96,7 +96,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
             
             self.thirdDayTemperatureLabel.text = weather.temperatureString
             self.thirdDayConditionImageView.image = UIImage(systemName: weather.conditionName)
-            self.thirdDayLabel.text = "Za 24 godziny"
+            self.thirdDayLabel.text = "In 24 hrs"
             
         }
     }
